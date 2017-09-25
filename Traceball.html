@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Trace Ball</title>
+
+		<style>
+			body {
+				background-color: #E8E8E8;
+				font-family: 'Arial';
+				font-size: 10px;
+				padding: 0px 0px 0px 0px;
+				margin: 0px 0px 0px 0px;
+			}
+			 canvas {
+				display: block;
+				margin: 0 auto;
+				border: 1px solid black;
+				}
+			#tracker {
+				position: absolute;
+				top: 0;
+				right: 10px;
+				background-color: white;
+				}
+
+		</style>
+                <script>
+function start() {
+			// set a radius for the circle
+			const RADIUS = 20;
+
+			// set maths for radius of circle
+			function degToRad(degrees) {
+			  var result = Math.PI / 180 * degrees;
+			  return result;
+				}
+			// Setup canvas
+			var canvas = document.querySelector('canvas');
+			var ctx = canvas.getContext('2d');
+
+			// set base variables for x and y
+			var x = 50;
+			var y = 50;
+
+			// draw canvas and player circle
+			function canvasDraw() {
+  			ctx.fillStyle = "grey";
+  			ctx.fillRect(0, 0, canvas.width, canvas.height);
+  			ctx.fillStyle = "#00ff00";
+  			ctx.beginPath();
+  			ctx.arc(x, y, RADIUS, 0, degToRad(360), true);
+  			ctx.fill();
+		}
+			canvasDraw();
+			
+			
+			
+			
+			// pointer lock object for cross browser
+
+				canvas.requestPointerLock = canvas.requestPointerLock ||
+                            canvas.mozRequestPointerLock;
+
+				document.exitPointerLock = document.exitPointerLock ||
+                           document.mozExitPointerLock;
+
+				canvas.onclick = function() {
+  				canvas.requestPointerLock();
+			};
+
+				// pointer lock event listeners
+
+				// Hook pointer lock state change events for different browsers
+				document.addEventListener('pointerlockchange', lockChangeAlert, false);
+				document.addEventListener('mozpointerlockchange', lockChangeAlert, false);
+
+				function lockChangeAlert() {
+  				if (document.pointerLockElement === canvas ||
+      				document.mozPointerLockElement === canvas) {
+    				console.log('The pointer lock status is now locked');
+    				document.addEventListener("mousemove", updatePosition, false);
+  				} else {
+    				console.log('The pointer lock status is now unlocked');  
+    				document.removeEventListener("mousemove", updatePosition, false);
+  				}
+				}
+
+				// link with tracker div
+				var tracker = document.getElementById('tracker');
+
+				// update position of mouse with circle
+				var animation;
+				function updatePosition(e) {
+  				x += e.movementX;
+  				y += e.movementY;
+  				if (x > canvas.width + RADIUS) {
+    				x = -RADIUS;
+  				}
+  				if (y > canvas.height + RADIUS) {
+    				y = -RADIUS;
+  				}  
+  				if (x < -RADIUS) {
+    				x = canvas.width + RADIUS;
+  				}
+  				if (y < -RADIUS) {
+    				y = canvas.height + RADIUS;
+  				}
+				
+				
+				// print x and y to tracker div
+  				tracker.textContent = "X position: " + x + ", Y position: " + y;
+
+				
+  				if (!animation) {
+    				animation = requestAnimationFrame(function() {
+      				animation = null;
+      				canvasDraw();	
+				
+    			});
+				
+				}
+			
+				// draw NPC Rectangle 
+				function NPC() {
+					ctx.fillRect( rX, rY, 30, 30);
+					ctx.fill();
+					ctx.fillStyle= "#FE0000";
+				};
+				
+		}	
+	}
+			// end game function (fill canvas grey)
+			function kill() {
+			var canvas = document.getElementById('canvas');
+				if (canvas.getContext) {
+				var ctx = canvas.getContext('2d');
+				// canvas
+				ctx.fillStyle="#A9A9A9";
+                ctx.fillRect(0, 0, canvas.width, canvas.height)
+				}	
+			}
+                                
+			
+			
+		</script>
+	</head>
+ 
+	<body>
+		<canvas id="canvas" class="Game" width="500" height="500">
+		</canvas>
+			<button onclick="myFunction()">New Game</button>
+			<button onclick="theFunction()">End Game</button>
+			<div id="tracker"></div>
+                 <script>
+			function myFunction() {
+				start();
+			}
+			function theFunction() {
+				kill();
+			}
+		</script>
+		<script>
+			
+		</script>
+	</body>
+               
+</html>
