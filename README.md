@@ -2,7 +2,7 @@
 Trace Ball
 
 <h1> Flow chart <h1>
-![Github Logo] (https://github.com/Oliver-Slape/Project-01/blob/master/TraceBall.png?raw=true "Flow chart")
+[Flow Chart] (master/TraceBall.png "Flow chart")
 
 
 <h1> Design Documentaation <h1>
