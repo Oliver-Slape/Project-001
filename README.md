@@ -2,7 +2,7 @@
 Trace Ball
 
 <h1> Flow chart <h1>
-[Flow Chart] (master/TraceBall.png "Flow chart")
+![Flow Chart] (docs/TraceBall.png "Flow chart")
 
 
 <h1> Design Documentaation <h1>
