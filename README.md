@@ -1,5 +1,6 @@
 # Project-01
-Trace Ball
+
+## Trace Ball
 
 <h1> User stories <h1>
 <h3> As a player I would like to play this game in my browser (cross platform) <h3>
@@ -12,23 +13,24 @@ Trace Ball
 <h3> As a player I should choose where to start or to change the difficulty <h3>
 
 
-<h1> Flow chart <h1>
+# Flow chart
 ![flowchart](https://github.com/Oliver-Slape/Project-01/blob/master/TraceBall.png)
-
 
 <h1> Design Documentation <h1>
 <h2> Process of implementation:<h2>
 
-<h3> Drawing the canvas:<h3> <h4> "function canvasDraw() {
+<h3> Drawing the canvas:<h3> 
+<h4> "function canvasDraw() {
   			ctx.fillStyle = "grey";
   			ctx.fillRect(0, 0, canvas.width, canvas.height);
   			ctx.fillStyle = "#00ff00";"
 <h4> 
 
-<h3> Drawing the NPC <h3> <h4> "function NPC() {
-					ctx.fillRect( rX, rY, 30, 30);
-					ctx.fill();
-					ctx.fillStyle= "#FE0000";"
+<h3> Drawing the NPC <h3> 
+<h4> "function NPC() {
+		ctx.fillRect( rX, rY, 30, 30);
+		ctx.fill();
+		ctx.fillStyle= "#FE0000";"
 <h4>
 
 <h2> IDE use and features: <h2>
