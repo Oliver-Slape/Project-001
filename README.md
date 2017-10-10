@@ -1,6 +1,11 @@
 # Project-01
 Trace Ball
 
+<h1> Flow chart <h1>
+![alt text][logo] 
+[logo]: https://github.com/Oliver-Slape/Project-01/blob/master/TraceBall.png "Flow chart"
+
+
 <h1> Design Documentaation <h1>
 <h2> Process of implementation:<h2>
 
