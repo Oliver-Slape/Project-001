@@ -62,12 +62,12 @@
 <h2> Debugging process: <h2> 
 	<h3> For debugging the IDE did not have any features so the console from the platform was used. This was Google Chrome. <h3>
 <h2> Coding Standards: <h2>
-	<h3> Indentation 
+	<h3> Indentation: 
 	function start() {
 			// set a radius for the circle
 			const RADIUS = 20;
 	<h3> 
-	<h3> Spaces before and after Operators 
+	<h3> Spaces before and after Operators: 
 	x += e.movementX;
 	<h3>
 <h2> Evaluation <h2>
