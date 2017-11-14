@@ -2,6 +2,8 @@
 
 ## Trace Ball
 
+### Task: a NPC (non-playable-character) that is controlled by the computer targets the users mouse position as the player moves across the screen, the game is over once the NPC touches the players mouse postion 3 times.
+
 <h1> User stories <h1>
 	<h3> As a player I would like to play this game in my browser (cross platform) <h3>
 	<h3> As a player I would like to see the UI (new game/quit game) <h3>
