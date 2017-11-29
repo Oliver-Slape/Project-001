@@ -48,7 +48,7 @@
 <h1> Design Documentation <h1>
 <h2> Process of implementation:<h2>
 <h3> Drawing the canvas:<h3> 
-	``` javascript 
+	```JavaScript 
 	"function canvasDraw() {
   			ctx.fillStyle = "grey";
   			ctx.fillRect(0, 0, canvas.width, canvas.height);
