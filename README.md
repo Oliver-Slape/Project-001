@@ -61,7 +61,7 @@ function canvasDraw() {
 <h3> Drawing the NPC <h3> 
 
 ```
-"function NPC() {
+function NPC() {
 	ctx.fillRect( rX, rY, 30, 30);
 	ctx.fill();
 	ctx.fillStyle= "#FE0000";"
