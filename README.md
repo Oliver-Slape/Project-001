@@ -49,6 +49,7 @@
 
 <h2> Process of implementation:<h2>
 <h3> Drawing the canvas:<h3> 
+
 ```
 function canvasDraw() {
   	ctx.fillStyle = "grey";
@@ -58,6 +59,7 @@ function canvasDraw() {
 ```
 
 <h3> Drawing the NPC <h3> 
+
 ```
 "function NPC() {
 	ctx.fillRect( rX, rY, 30, 30);
