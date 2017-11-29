@@ -78,3 +78,8 @@
 	<h3>
 <h2> Evaluation <h2>
 	<h3> Debugging helped find and locate the errors in the code and improve the functionality of the program. <h3>
+	```javascript
+function test() {
+ console.log("look ma’, no spaces");
+}
+```
