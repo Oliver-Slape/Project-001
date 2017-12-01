@@ -87,5 +87,5 @@ x += e.movementX;
 ```
 <h3>
 <h2> Evaluation <h2>
-
+<h3> Creating the cricle required using Co-Ordinates to plot the circle on the canvas and then fill it and output it on the canvas. This then follows the Co-Ordinates of the mouse input on the screen and outputs the circle to these new updated Co-Ordinates. <h3>
 <h3> Debugging helped find and locate the errors in the code and improve the functionality of the program. <h3>
